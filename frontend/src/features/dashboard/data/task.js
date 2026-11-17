@@ -1,0 +1,38 @@
+export const initialTasks = [
+  {
+    id: 1,
+    title: "Prepare project proposal",
+    description: "Complete the proposal for the new client project.",
+    priority: "High",
+    status: "In Progress",
+    dueDate: "2026-11-18",
+    assignee: "Bushra",
+  },
+  {
+    id: 2,
+    title: "Review dashboard design",
+    description: "Check dashboard layout and responsive design.",
+    priority: "Medium",
+    status: "Pending",
+    dueDate: "2026-11-19",
+    assignee: "Ahmed",
+  },
+  {
+    id: 3,
+    title: "Fix login validation",
+    description: "Resolve validation issues in the login form.",
+    priority: "High",
+    status: "Completed",
+    dueDate: "2026-11-15",
+    assignee: "Sara",
+  },
+  {
+    id: 4,
+    title: "Write unit tests",
+    description: "Add tests for task management features.",
+    priority: "Low",
+    status: "Pending",
+    dueDate: "2026-11-22",
+    assignee: "Mohammed",
+  },
+];
