@@ -1,0 +1,226 @@
+/* ==========================================
+   TEAMTASK THEME SYSTEM
+   Default: Light Theme
+   ========================================== */
+
+:root,
+[data-theme="light"] {
+  color-scheme: light;
+
+  --color-primary: #2463c5;
+  --color-primary-hover: #1d4fa3;
+  --color-primary-light: #eaf1ff;
+  --color-accent: #3478e5;
+
+  --color-navy: #17233b;
+  --color-text: #202938;
+  --color-text-secondary: #778397;
+  --color-text-muted: #98a2b3;
+
+  --color-background: #f4f6fb;
+  --color-surface: #ffffff;
+  --color-surface-secondary: #f8faff;
+
+  --color-border: #e5eaf2;
+  --color-border-strong: #d5deeb;
+
+  --color-success: #23834b;
+  --color-success-bg: #e9f8ef;
+
+  --color-warning: #ad791d;
+  --color-warning-bg: #fff7e7;
+
+  --color-danger: #d34d39;
+  --color-danger-bg: #fff0ed;
+
+  --color-info: #5268c8;
+  --color-info-bg: #edf2ff;
+
+  --color-sidebar: #2463c5;
+  --color-sidebar-text: #ffffff;
+  --color-sidebar-hover: rgba(255, 255, 255, 0.17);
+
+  --color-input-background: #ffffff;
+  --color-table-hover: #f8faff;
+
+  --shadow-sm: 0 1px 2px rgba(23, 35, 59, 0.05);
+  --shadow-md: 0 4px 12px rgba(23, 35, 59, 0.07);
+  --shadow-lg: 0 12px 30px rgba(23, 35, 59, 0.1);
+}
+
+/* ==========================================
+   DARK THEME
+   ========================================== */
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-primary: #6b9df5;
+  --color-primary-hover: #85adfa;
+  --color-primary-light: #263c5e;
+  --color-accent: #83aaff;
+
+  --color-navy: #f0f4fc;
+  --color-text: #e4eaf4;
+  --color-text-secondary: #a5b1c4;
+  --color-text-muted: #8492a8;
+
+  --color-background: #111827;
+  --color-surface: #1c2637;
+  --color-surface-secondary: #253247;
+
+  --color-border: #344258;
+  --color-border-strong: #46566e;
+
+  --color-success: #65d394;
+  --color-success-bg: #193c30;
+
+  --color-warning: #f2c46b;
+  --color-warning-bg: #49391e;
+
+  --color-danger: #ff8979;
+  --color-danger-bg: #482b30;
+
+  --color-info: #9bb5ff;
+  --color-info-bg: #293958;
+
+  --color-sidebar: #18243a;
+  --color-sidebar-text: #f0f4fc;
+  --color-sidebar-hover: #2b3b55;
+
+  --color-input-background: #253247;
+  --color-table-hover: #253247;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.22);
+  --shadow-lg: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================================
+   DARK MODE COMPONENT OVERRIDES
+   ========================================== */
+
+body {
+  background: var(--color-background);
+  color: var(--color-text);
+  transition:
+    background-color 200ms ease,
+    color 200ms ease;
+}
+
+.app-layout {
+  background: var(--color-background);
+  color: var(--color-text);
+}
+
+.sidebar {
+  background: var(--color-sidebar);
+  color: var(--color-sidebar-text);
+}
+
+.brand {
+  color: var(--color-sidebar-text);
+}
+
+.nav-link {
+  color: var(--color-sidebar-text);
+
+  &:hover,
+  &.active {
+    background: var(--color-sidebar-hover);
+    color: var(--color-sidebar-text);
+  }
+}
+
+.main-content {
+  background: var(--color-background);
+}
+
+.stat-card,
+.tasks-section,
+.card {
+  background: var(--color-surface);
+  border-color: var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.stat-card strong,
+.task-main h3,
+.section-header h2,
+.topbar h1 {
+  color: var(--color-navy);
+}
+
+.topbar p,
+.section-header p,
+.task-main p,
+.task-meta small {
+  color: var(--color-text-secondary);
+}
+
+.toolbar input,
+.toolbar select,
+.form-control {
+  background: var(--color-input-background);
+  color: var(--color-text);
+  border-color: var(--color-border-strong);
+}
+
+.toolbar input::placeholder,
+.form-control::placeholder {
+  color: var(--color-text-muted);
+}
+
+.task-row {
+  border-color: var(--color-border);
+}
+
+.data-table {
+  background: var(--color-surface);
+  color: var(--color-text);
+
+  th {
+    background: var(--color-surface-secondary);
+    color: var(--color-text-secondary);
+  }
+
+  tbody tr:hover {
+    background: var(--color-table-hover);
+  }
+}
+
+.table-container {
+  background: var(--color-surface);
+  border-color: var(--color-border);
+}
+
+.btn-secondary {
+  background: var(--color-surface);
+  color: var(--color-text);
+  border-color: var(--color-border);
+
+  &:hover {
+    background: var(--color-surface-secondary);
+  }
+}
+
+.empty-state {
+  color: var(--color-text-secondary);
+}
+
+/* Smooth transitions for theme changes */
+
+.stat-card,
+.tasks-section,
+.card,
+.sidebar,
+.nav-link,
+.toolbar input,
+.toolbar select,
+.task-row {
+  transition:
+    background-color 200ms ease,
+    border-color 200ms ease,
+    color 200ms ease,
+    box-shadow 200ms ease;
+}
