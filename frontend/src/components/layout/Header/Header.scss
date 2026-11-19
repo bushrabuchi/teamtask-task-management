@@ -1,0 +1,146 @@
+.app-header {
+  min-height: 76px;
+  padding: 14px 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 24px;
+
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header-search {
+  width: min(480px, 55%);
+  min-height: 42px;
+  padding: 0 13px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  background: var(--color-surface-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: 15px;
+
+  color: var(--color-text-secondary);
+
+  input {
+    width: 100%;
+    min-width: 0;
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+    color: var(--color-text);
+    font-size: 13px;
+
+    &::placeholder {
+      color: var(--color-text-muted);
+    }
+  }
+
+  kbd {
+    padding: 3px 6px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    font-size: 10px;
+    white-space: nowrap;
+  }
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-icon-button {
+  position: relative;
+
+  width: 38px;
+  height: 38px;
+
+  display: grid;
+  place-items: center;
+
+  border: 0;
+  border-radius: 9px;
+
+  background: transparent;
+  color: var(--color-text-secondary);
+
+  &:hover {
+    background: var(--color-surface-secondary);
+    color: var(--color-primary);
+  }
+}
+
+.notification-dot {
+  position: absolute;
+  top: 7px;
+  right: 8px;
+
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+
+  background: var(--color-danger);
+}
+
+.header-divider {
+  height: 30px;
+  border-left: 1px solid var(--color-border);
+}
+
+.header-profile {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  border: 0;
+  background: transparent;
+  color: var(--color-text);
+
+  font-size: 13px;
+}
+
+.header-avatar {
+  width: 35px;
+  height: 35px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+@media (max-width: 700px) {
+  .app-header {
+    padding: 12px 14px;
+    gap: 10px;
+  }
+
+  .header-search {
+    width: auto;
+    flex: 1;
+
+    kbd {
+      display: none;
+    }
+  }
+
+  .header-actions {
+    gap: 5px;
+  }
+
+  .header-profile span,
+  .header-profile > svg,
+  .header-divider {
+    display: none;
+  }
+}
