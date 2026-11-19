@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import Header from "./components/layout/Header/Header";
 import Sidebar from "./components/layout/Sidebar/Sidebar";
-// import Dashboard from "./features/dashboard/Dashboard";
+import Dashboard from "./features/dashboard/Dashboard";
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);

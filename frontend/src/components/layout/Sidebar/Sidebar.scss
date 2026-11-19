@@ -3,7 +3,9 @@
   min-width: 250px;
   min-height: 100vh;
   padding: 28px 18px;
+  border-radius: 0 64px 16px 0;
 
+  // border-right: 25px solid var(--color-border);
   display: flex;
   flex-direction: column;
 
