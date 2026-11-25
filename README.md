@@ -2,6 +2,9 @@
 
 A collaborative task management project for practising Git workflows and frontend development.
 
+#Deployed link in vercel
+https://teamtask-task-management-git-265bdf-bushracc891-2262s-projects.vercel.app/
+
 ## Project goals
 
 - Create and assign tasks
