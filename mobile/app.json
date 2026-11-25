@@ -10,6 +10,13 @@
     "ios": {
       "icon": "./assets/expo.icon"
     },
+
+    "entryPoint": "expo-router/entry",
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "favicon": "./assets/images/favicon.png"
+    },
     "android": {
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
@@ -18,11 +25,6 @@
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
       "predictiveBackGestureEnabled": false
-    },
-    "web": {
-      "output": "single",
-      "favicon": "./assets/images/favicon.png",
-      "bundler": "metro"
     },
     "plugins": [
       "expo-router",
